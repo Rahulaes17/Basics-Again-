@@ -1,0 +1,84 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: bisque;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.head{
+    width: 100%;
+}
+
+.head h1{
+    padding: 1.2rem;
+    text-align: center;
+    background-color: black;
+    color: bisque;
+}
+
+.card{
+    background-color: aliceblue;
+    text-align: center;
+    margin-top: 3rem;
+    padding: 2rem;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+    border-radius: 15px;
+}
+
+.img{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    /* margin: 1.5rem; */
+}
+
+.name{
+    margin-top: 1.5rem;
+    font-size: 1.7rem;
+    font-weight: 700;
+    
+}
+
+.role{
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin: 0.8rem;
+}
+
+.bio{
+    margin: 1rem;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    
+}
+
+.contact{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.btn{
+    background-color: black;
+    color: bisque;
+    padding: 0.8rem 1.2rem;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: 0.3s ease;
+    /* margin-bottom: 1rem; */
+}
+
+.btn:hover{
+    background-color: rgb(108, 107, 107);
+}
