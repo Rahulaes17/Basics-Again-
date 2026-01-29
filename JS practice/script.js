@@ -32,3 +32,50 @@ marks.forEach(marks => {
     console.log(`${marks}`,"=", `${grade(marks)}`)
 });
 
+// String Utility Toolkit (Strings + Functions)
+
+let string = "I am Rahul and I am practicing javascript."
+
+function reverse(string){
+     return string.split("").reverse().join("");
+}
+console.log("Reversed String:",reverse(string))
+
+function countVowels(string){
+    let vowels = "aeiouAEIOU"
+    let count=0
+
+    for(let ch of string){
+        if (vowels.includes(ch)){
+                count++;
+        } 
+    }
+    return count;
+}
+console.log("Numbers of vowel are:", countVowels(string))
+
+function uCase(string){
+    return string.toUpperCase();
+}
+console.log(uCase(string))
+
+function removeSpaces(string) {
+    return string.replace(/\s+/g, "");
+}
+console.log(removeSpaces(string))
+
+
+let str1 = "Race car"
+let str2= "Hello"
+
+function isPalindrome(s){
+    let str= s.toLowerCase().replace(/\s+/g, "");
+    let revStr= str.split("").reverse().join("");
+
+    if (str === revStr){
+        return "Yes it is a Palindrome"
+    }
+    return "Not a Palindrome"
+}
+console.log(isPalindrome(str1))
+console.log(isPalindrome(str2))
