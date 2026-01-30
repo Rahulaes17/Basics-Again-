@@ -79,3 +79,70 @@ function isPalindrome(s){
 }
 console.log(isPalindrome(str1))
 console.log(isPalindrome(str2))
+
+
+//Bank Account Simulator (Objects + Methods + Conditions)
+
+let account = {
+    name:"Rahul",
+    balance: 1000,
+    transactions:[]
+}
+
+function deposit(amount){
+    if(amount<=0){
+       console.log("Invalid amount")
+       return;
+    }
+
+    account.balance+=amount;
+
+    account.transactions.push({
+        type: "deposit",
+        amount: amount,
+        time: new Date().toLocaleString()
+    });
+
+    console.log(`${amount}`, "was deposited.", "Balance:",`${account.balance}`)
+}
+
+
+function withdraw(amount){
+    if(amount<=0){
+        console.log("Invalid amount");
+        return;
+    }
+
+    if(amount>account.balance){
+        console.log("Insufficient Balance");
+        return;
+    }
+
+    account.balance-=amount;
+
+    account.transactions.push({
+        type:"Withdrawal",
+        amount:amount,
+        time: new Date().toLocaleString()
+    })
+
+    console.log(`${amount}`, "was withdrawn.", "Balance:", `${account.balance}`)
+}
+
+function checkBalance(){
+    console.log("Balance:", `${account.balance}`)
+}
+
+function showHistory(){
+    console.log("Transaction History:");
+    account.transactions.forEach(t=>{
+        console.log(`${t.type}`, "of", `${t.amount}`,"on",`${t.time}`)
+    })
+}
+
+deposit(8000);
+withdraw(2500);
+deposit(1500);
+withdraw(3200);
+checkBalance();
+showHistory();
